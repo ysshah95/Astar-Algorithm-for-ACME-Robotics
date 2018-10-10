@@ -23,7 +23,7 @@ Click this link to view the product backlog, time sheets, defect logs and releas
 
 ## Activity Diagram
 <p align="center">
-<a target="_blank"><img src="![a_ algorithm activity diagram](https://user-images.githubusercontent.com/31979840/46711757-af2dd580-cc1b-11e8-8123-b8372a29949f.png)"
+<a target="_blank"><img src="UML/initial/A_ Algorithm Activity Diagram.png"
 alt="NMPC" width="480" height="480" border="10" />
 </a>
 </p>
