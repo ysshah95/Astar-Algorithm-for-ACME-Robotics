@@ -1,4 +1,6 @@
-# C++ Boilerplate
+# A* Algorithm  for ACME Robotics
+*This module is for MidTerm Project of course ENPM808X: Software Development for Robotics*
+
 [![Build Status](https://travis-ci.org/ysshah95/Astar-Algorithm-for-ACME-Robotics.svg?branch=master)](https://travis-ci.org/ysshah95/Astar-Algorithm-for-ACME-Robotics)
 [![Coverage Status](https://coveralls.io/repos/github/ysshah95/Astar-Algorithm-for-ACME-Robotics/badge.svg?branch=master)](https://coveralls.io/github/ysshah95/Astar-Algorithm-for-ACME-Robotics?branch=master)
 ---
@@ -9,6 +11,7 @@ Simple starter C++ project with:
 
 - cmake
 - googletest
+
 
 ## Standard install via command-line
 ```
@@ -51,6 +54,8 @@ cd boilerplate-eclipse
 cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../cpp-boilerplate/
 ```
 
+## Solo Iterative Process Overview
+Click this link to view the product backlog, time sheets, defect logs and release backlog - [link](https://docs.google.com/spreadsheets/d/1dE0h7dNnQtP3aUuqrfs1r5tL3C8uaOQiwODgHtyh9s4/edit?usp=sharing)
 ## Import
 
 Open Eclipse, go to File -> Import -> General -> Existing Projects into Workspace -> 
