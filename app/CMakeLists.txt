@@ -1,6 +1,6 @@
 find_package(SDL2 REQUIRED)
 
-add_executable(shell-app main.cpp)
+add_executable(shell-app main.cpp astar.cpp map.cpp nodes.cpp)
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/include

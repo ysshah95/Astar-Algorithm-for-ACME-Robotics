@@ -4,6 +4,10 @@ project (scratch)
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
+# Included include directory
+include_directories(include)
+
+
 # We probably don't want this to run on every build.
 option(COVERAGE "Generate Coverage Data" OFF)
 
