@@ -44,12 +44,15 @@ nodes::nodes(int x, int y, int g_cost, int total_cost) : x_(x), y_(y),
 }
 
 auto nodes::compute_h(int xgoal, int ygoal) -> double{
+    return sqrt((x_-xgoal)*(x_-xgoal)+(y_-ygoal)*y_-ygoal);
 }
 
 auto nodes::compute_g(int k) -> double {
+    return g_cost_ += (k % 2 == 0 ? 1 : 1.41);
 }
 
 auto nodes::compute_f(int x1, int y1) -> double {
+    return f_cost_ = g_cost_ + compute_h(x1, y1); 
 }
 
 nodes::~nodes(){
