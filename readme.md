@@ -24,6 +24,9 @@ The whole project was programmed using c++ programming language, and it uses c++
 ### A* ALgorithm Working
 ![path](https://user-images.githubusercontent.com/31979840/47058074-659c3800-d191-11e8-9300-a50b43845a82.gif)
 
+### Output of this repository for Start Node(0,0) and Goal Node (799,799)
+![screenshot from 2018-10-17 09-30-38 copy](https://user-images.githubusercontent.com/31979840/47091935-e429c180-d1f3-11e8-80f0-16869cb8a120.png)
+
 
 ## Dependencies
 
