@@ -22,6 +22,8 @@ This module has three classes to implement the A* algorithm. They are nodes, map
 The whole project was programmed using c++ programming language, and it uses c++ 11/14 features. The code was written with c++ style guide and cpp lint validations. Cppcheck was also used for static code analysis. This project followed Test_driven Development to guide implementation and uses unit tests to test the code coverage written using Google Test framework. The code follows doxygen-formatted comments to aid doxygen documentation. The code was written by following Solo Iterative Process (SIP).
 
 ### A* ALgorithm Working
+![path](https://user-images.githubusercontent.com/31979840/47058074-659c3800-d191-11e8-9300-a50b43845a82.gif)
+
 
 ## Dependencies
 
@@ -39,8 +41,11 @@ sudo apt-get install libsdl2_dev
 Click this link to view the product backlog, time sheets, defect logs and release backlog - [link](https://docs.google.com/spreadsheets/d/1dE0h7dNnQtP3aUuqrfs1r5tL3C8uaOQiwODgHtyh9s4/edit?usp=sharing)
 
 ## Activity Diagram
+![a_ algorithm activity diagram](https://user-images.githubusercontent.com/31979840/47058108-8fedf580-d191-11e8-8d49-08fe1f0463af.png)
 
 ## Class Diagram
+![a_ algorithm uml diagram final](https://user-images.githubusercontent.com/31979840/47058096-84023380-d191-11e8-8f87-cb781bde057c.png)
+
 
 
 
