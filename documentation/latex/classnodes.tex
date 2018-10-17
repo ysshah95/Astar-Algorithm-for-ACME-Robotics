@@ -1,0 +1,154 @@
+\hypertarget{classnodes}{}\section{nodes Class Reference}
+\label{classnodes}\index{nodes@{nodes}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnodes_a3988ea9ac6183274db3f650401679c43}{nodes} ()
+\begin{DoxyCompactList}\small\item\em nodes class Constructor \end{DoxyCompactList}\item 
+\hyperlink{classnodes_a9d918b5b9246a8446e4c436d1c480303}{nodes} (int x, int y, double g\+\_\+cost, double total\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Parameterized nodes Constructor. \end{DoxyCompactList}\item 
+auto \hyperlink{classnodes_a29abcbaca8c8067183c31e4a44a4ff5d}{compute\+\_\+h} (int xgoal, int ygoal) -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Calculates the Euclidian Distance between the current node and goal node. \end{DoxyCompactList}\item 
+auto \hyperlink{classnodes_a316416838883df193808d775003aa5d6}{compute\+\_\+g} (int k) -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Calculates the path cost or cost to come of a node. \end{DoxyCompactList}\item 
+auto \hyperlink{classnodes_a1e13e45bda8fc385da757d3c58c7be18}{compute\+\_\+f} (int x1, int y1) -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Calculates total cost of the node (f cost) \end{DoxyCompactList}\item 
+\hyperlink{classnodes_a2f04514e7bf728b151f09c730c1ffe99}{$\sim$nodes} ()\hypertarget{classnodes_a2f04514e7bf728b151f09c730c1ffe99}{}\label{classnodes_a2f04514e7bf728b151f09c730c1ffe99}
+
+\begin{DoxyCompactList}\small\item\em Destructor of the nodes object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries x\+\_\+}\hypertarget{classnodes_a13aae6bb9dbca27b1473ae534a20c1d5}{}\label{classnodes_a13aae6bb9dbca27b1473ae534a20c1d5}
+
+\item 
+int {\bfseries y\+\_\+}\hypertarget{classnodes_a39c914f7b64fc06c908288da232c375d}{}\label{classnodes_a39c914f7b64fc06c908288da232c375d}
+
+\item 
+double {\bfseries g\+\_\+cost\+\_\+}\hypertarget{classnodes_a3e0319c1957bdde99f92bacd9d91d91f}{}\label{classnodes_a3e0319c1957bdde99f92bacd9d91d91f}
+
+\item 
+double {\bfseries f\+\_\+cost\+\_\+}\hypertarget{classnodes_a2f848d8bbea1703f6159b81432225a5f}{}\label{classnodes_a2f848d8bbea1703f6159b81432225a5f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nodes@{nodes}!nodes@{nodes}}
+\index{nodes@{nodes}!nodes@{nodes}}
+\subsubsection[{\texorpdfstring{nodes()}{nodes()}}]{\setlength{\rightskip}{0pt plus 5cm}nodes\+::nodes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnodes_a3988ea9ac6183274db3f650401679c43}{}\label{classnodes_a3988ea9ac6183274db3f650401679c43}
+
+
+nodes class Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\index{nodes@{nodes}!nodes@{nodes}}
+\index{nodes@{nodes}!nodes@{nodes}}
+\subsubsection[{\texorpdfstring{nodes(int x, int y, double g\+\_\+cost, double total\+\_\+cost)}{nodes(int x, int y, double g_cost, double total_cost)}}]{\setlength{\rightskip}{0pt plus 5cm}nodes\+::nodes (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{double}]{g\+\_\+cost, }
+\item[{double}]{total\+\_\+cost}
+\end{DoxyParamCaption}
+)}\hypertarget{classnodes_a9d918b5b9246a8446e4c436d1c480303}{}\label{classnodes_a9d918b5b9246a8446e4c436d1c480303}
+
+
+Parameterized nodes Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate of the node \\
+\hline
+{\em y} & coordinate of the node \\
+\hline
+{\em cost} & to come of that node \\
+\hline
+{\em total} & cost of that node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{nodes@{nodes}!compute\+\_\+f@{compute\+\_\+f}}
+\index{compute\+\_\+f@{compute\+\_\+f}!nodes@{nodes}}
+\subsubsection[{\texorpdfstring{compute\+\_\+f(int x1, int y1) -\/$>$ double}{compute_f(int x1, int y1) -> double}}]{\setlength{\rightskip}{0pt plus 5cm}auto nodes\+::compute\+\_\+f (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1}
+\end{DoxyParamCaption}
+) -\/$>$ double}\hypertarget{classnodes_a1e13e45bda8fc385da757d3c58c7be18}{}\label{classnodes_a1e13e45bda8fc385da757d3c58c7be18}
+
+
+Calculates total cost of the node (f cost) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & is the x coordinate of the goal \\
+\hline
+{\em y1} & is the y coordinate of the goal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total cost of the node 
+\end{DoxyReturn}
+\index{nodes@{nodes}!compute\+\_\+g@{compute\+\_\+g}}
+\index{compute\+\_\+g@{compute\+\_\+g}!nodes@{nodes}}
+\subsubsection[{\texorpdfstring{compute\+\_\+g(int k) -\/$>$ double}{compute_g(int k) -> double}}]{\setlength{\rightskip}{0pt plus 5cm}auto nodes\+::compute\+\_\+g (
+\begin{DoxyParamCaption}
+\item[{int}]{k}
+\end{DoxyParamCaption}
+) -\/$>$ double}\hypertarget{classnodes_a316416838883df193808d775003aa5d6}{}\label{classnodes_a316416838883df193808d775003aa5d6}
+
+
+Calculates the path cost or cost to come of a node. 
+
+For diagonal movement cost is 1.\+41 For straight line movement cost is 1
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & is the direction of the movement\\
+\hline
+\end{DoxyParams}
+cost to come of that node from start node \index{nodes@{nodes}!compute\+\_\+h@{compute\+\_\+h}}
+\index{compute\+\_\+h@{compute\+\_\+h}!nodes@{nodes}}
+\subsubsection[{\texorpdfstring{compute\+\_\+h(int xgoal, int ygoal) -\/$>$ double}{compute_h(int xgoal, int ygoal) -> double}}]{\setlength{\rightskip}{0pt plus 5cm}auto nodes\+::compute\+\_\+h (
+\begin{DoxyParamCaption}
+\item[{int}]{xgoal, }
+\item[{int}]{ygoal}
+\end{DoxyParamCaption}
+) -\/$>$ double}\hypertarget{classnodes_a29abcbaca8c8067183c31e4a44a4ff5d}{}\label{classnodes_a29abcbaca8c8067183c31e4a44a4ff5d}
+
+
+Calculates the Euclidian Distance between the current node and goal node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate of the goal \\
+\hline
+{\em y} & coordinate of the goal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance in double 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{nodes_8hpp}{nodes.\+hpp}\item 
+app/\hyperlink{nodes_8cpp}{nodes.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\hypertarget{classastar}{}\section{astar Class Reference}
+\label{classastar}\index{astar@{astar}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classastar_a808c2fae9494ae43181c00fc82faa66e}{astar} ()
+\begin{DoxyCompactList}\small\item\em astar class Constructor \end{DoxyCompactList}\item 
+\hyperlink{classastar_ad0c911baec7de8b797509a3ace9f571a}{astar} (int x\+Start, int y\+Start, int x\+Goal, int y\+Goal)
+\begin{DoxyCompactList}\small\item\em Parameterized astar Constructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \hyperlink{classastar_a2b425e6ef0bbaee997d2d05d87261b3c}{astar\+\_\+path} (std\+::vector$<$ std\+::vector$<$ int $>$$>$ \hyperlink{classmap}{map})
+\begin{DoxyCompactList}\small\item\em Get an optimal path from start to goal node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries x\+\_\+start\+\_\+}\hypertarget{classastar_addb5a0935d9faf28cf2816c45e6312b0}{}\label{classastar_addb5a0935d9faf28cf2816c45e6312b0}
+
+\item 
+int {\bfseries y\+\_\+start\+\_\+}\hypertarget{classastar_acd09db0a6c516e3656f4d4d2b092eced}{}\label{classastar_acd09db0a6c516e3656f4d4d2b092eced}
+
+\item 
+int {\bfseries x\+\_\+goal\+\_\+}\hypertarget{classastar_a7660617c137c37d9771a98a5e0754b8e}{}\label{classastar_a7660617c137c37d9771a98a5e0754b8e}
+
+\item 
+int {\bfseries y\+\_\+goal\+\_\+}\hypertarget{classastar_a230f8569c910a1c6b0de9c654b5dd9b5}{}\label{classastar_a230f8569c910a1c6b0de9c654b5dd9b5}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classastar_acc59bcc4aa26b96977581ad5d6657457}{operator$>$} (const \hyperlink{classnodes}{nodes} \&node1, const \hyperlink{classnodes}{nodes} \&node2)
+\begin{DoxyCompactList}\small\item\em overloads the \textquotesingle{}$>$\textquotesingle{} operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{astar@{astar}!astar@{astar}}
+\index{astar@{astar}!astar@{astar}}
+\subsubsection[{\texorpdfstring{astar()}{astar()}}]{\setlength{\rightskip}{0pt plus 5cm}astar\+::astar (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classastar_a808c2fae9494ae43181c00fc82faa66e}{}\label{classastar_a808c2fae9494ae43181c00fc82faa66e}
+
+
+astar class Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\index{astar@{astar}!astar@{astar}}
+\index{astar@{astar}!astar@{astar}}
+\subsubsection[{\texorpdfstring{astar(int x\+Start, int y\+Start, int x\+Goal, int y\+Goal)}{astar(int xStart, int yStart, int xGoal, int yGoal)}}]{\setlength{\rightskip}{0pt plus 5cm}astar\+::astar (
+\begin{DoxyParamCaption}
+\item[{int}]{x\+Start, }
+\item[{int}]{y\+Start, }
+\item[{int}]{x\+Goal, }
+\item[{int}]{y\+Goal}
+\end{DoxyParamCaption}
+)}\hypertarget{classastar_ad0c911baec7de8b797509a3ace9f571a}{}\label{classastar_ad0c911baec7de8b797509a3ace9f571a}
+
+
+Parameterized astar Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate of the start node \\
+\hline
+{\em y} & coordinate of the start node \\
+\hline
+{\em x} & coordinate of the goal node \\
+\hline
+{\em y} & coordinate of the goal node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{astar@{astar}!astar\+\_\+path@{astar\+\_\+path}}
+\index{astar\+\_\+path@{astar\+\_\+path}!astar@{astar}}
+\subsubsection[{\texorpdfstring{astar\+\_\+path(std\+::vector$<$ std\+::vector$<$ int $>$$>$ map)}{astar_path(std::vector< std::vector< int >> map)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ astar\+::astar\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ int $>$$>$}]{map}
+\end{DoxyParamCaption}
+)}\hypertarget{classastar_a2b425e6ef0bbaee997d2d05d87261b3c}{}\label{classastar_a2b425e6ef0bbaee997d2d05d87261b3c}
+
+
+Get an optimal path from start to goal node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & is a map which holds info if a node is walkable or blocked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+path with parent directions from start to goal 
+\end{DoxyReturn}
+This loop takes the first entry of the open list as the current node since it has the lowest total cost function.
+
+Trace the path and store it of the goal is found.
+
+Expand all the nodes for current node, calculate their costs and store them in their variables.
+
+For all the nodes lying outside the map, blocked or is in the visisted list then simply ignor them. 
+
+\subsection{Friends And Related Function Documentation}
+\index{astar@{astar}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!astar@{astar}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf nodes} \&}]{node1, }
+\item[{const {\bf nodes} \&}]{node2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classastar_acc59bcc4aa26b96977581ad5d6657457}{}\label{classastar_acc59bcc4aa26b96977581ad5d6657457}
+
+
+overloads the \textquotesingle{}$>$\textquotesingle{} operator 
+
+Gives priority to node with greater total cost to rearrange the priority Queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is a reference of a node \\
+\hline
+{\em q} & is a reference of a node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the total cost (f cost) of p is greater, else false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{astar_8hpp}{astar.\+hpp}\item 
+app/\hyperlink{astar_8cpp}{astar.\+cpp}\end{DoxyCompactItemize}
