@@ -39,7 +39,7 @@ nodes::nodes(void) : x_(0), y_(0), g_cost_(0), f_cost_(0) {
     std::cout << "Default Constructor Called" << std::endl;
 }
 
-nodes::nodes(int x, int y, int g_cost, int total_cost) : x_(x), y_(y),
+nodes::nodes(int x, int y, double g_cost, double total_cost) : x_(x), y_(y),
                 g_cost_(g_cost), f_cost_(total_cost) {
 }
 

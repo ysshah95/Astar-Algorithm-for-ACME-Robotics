@@ -63,7 +63,7 @@ class nodes{
    * 
    * @return none
    */
-  nodes(int x, int y, int g_cost, int total_cost);
+  nodes(int x, int y, double g_cost, double total_cost);
 
   /**
    * @brief Calculates the Euclidian Distance between the current node and goal node
