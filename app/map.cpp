@@ -62,7 +62,7 @@ bool map::print_path(std::vector<std::vector<int>> map,
     // Initialize the SDL library to create a window.
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow(
-        "Testing od SDL",
+        "A* Algorithm",
         SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED,
         800,
@@ -84,7 +84,7 @@ bool map::print_path(std::vector<std::vector<int>> map,
     }
 
     // Set path colour to blue
-    for (auto i=0; i < path.size(); i++) {
+    for (std::string::size_type i=0; i < path.size(); i++) {
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
         SDL_RenderDrawPoint(renderer, path[i].first, path[i].second);
     }

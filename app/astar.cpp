@@ -60,9 +60,9 @@ std::vector<std::pair<int, int>> astar::astar_path(
     std::priority_queue<nodes, std::vector<nodes>,
                           std::greater<nodes>> temp_list;
     // Create 2D vectors to store open and visited nodes.
-    std::vector<std::vector<int> > open(10, std::vector<int>(10, 0));
-    std::vector<std::vector<int> > visited(10, std::vector<int>(10, 0));
-    std::vector<std::vector<int> > parentDir(10, std::vector<int>(10, 0));
+    std::vector<std::vector<int> > open(800, std::vector<int>(800, 0));
+    std::vector<std::vector<int> > visited(800, std::vector<int>(800, 0));
+    std::vector<std::vector<int> > parentDir(800, std::vector<int>(800, 0));
 
     // 8 possible moves in x and y direction
     std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
@@ -102,7 +102,7 @@ std::vector<std::pair<int, int>> astar::astar_path(
           int dx = current.x_ + moveX[dir], dy = current.y_ + moveY[dir];
           /** For all the nodes lying outside the map, blocked
            * or is in the visisted list then simply ignor them.*/
-        if (!(dx < 0 || dx > 9 || dy < 0 || dy > 9 ||
+        if (!(dx < 0 || dx > 799 || dy < 0 || dy > 799 ||
               map[dx][dy] == 0 || visited[dx][dy] == 1)) {
             nodes child(dx, dy, current.g_cost_, current.f_cost_);
             child.g_cost_ = child.compute_g(dir);

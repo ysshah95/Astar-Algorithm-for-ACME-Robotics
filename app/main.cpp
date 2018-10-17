@@ -45,7 +45,7 @@ int main() {
     // Store the map with obstacles in a variable.
     std::vector<std::vector<int>> map = blank_map.create_map();
     // Create the astar object with initialization.
-    astar path_finder(0, 0, 5, 5);
+    astar path_finder(0, 0, 650, 450);
     // Store the path found in a variable
     std::vector<std::pair<int, int>> path = path_finder.astar_path(map);
     // Show the path on map.
