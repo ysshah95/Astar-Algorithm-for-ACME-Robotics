@@ -46,15 +46,15 @@ std::vector<std::vector<int>> map::create_map() {
                 i < rectangle_center_x + rectangle_span; i++) {
         for (int j = rectangle_center_y - rectangle_span;
                     j < rectangle_center_y + rectangle_span; j++) {
-        map_vec[i][j] = 0; // updating the matrix elements to 0 if in obstacle.
+        map_vec[i][j] = 0;  // updating the matrix elements to 0 if in obstacle.
         }
     }
     return map_vec;
 }
 
-bool map::print_path(std::vector<std::vector<int>> map, 
-                        std::vector<std::pair<int,int>> path) {
-    if (path[0].first == -1){
+bool map::print_path(std::vector<std::vector<int>> map,
+                        std::vector<std::pair<int, int>> path) {
+    if (path[0].first == -1) {
         return 0;
     }
     SDL_Init(SDL_INIT_VIDEO);
@@ -64,17 +64,16 @@ bool map::print_path(std::vector<std::vector<int>> map,
         SDL_WINDOWPOS_CENTERED,
         800,
         800,
-        SDL_WINDOW_SHOWN
-    );
+        SDL_WINDOW_SHOWN);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
-    SDL_SetRenderDrawColor (renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
 
     // Set obstacle color to red
-    for(auto i=0; i<=799; i++){
-        for(auto j=0; j<=799; j++){
-            if (map[i][j] == 0){
+    for (auto i=0;  i<= 799; i++) {
+        for (auto j=0; j <= 799; j++) {
+            if (map[i][j] == 0) {
                 SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
                 SDL_RenderDrawPoint(renderer, i, j);
             }
@@ -82,12 +81,12 @@ bool map::print_path(std::vector<std::vector<int>> map,
     }
 
     // Set path colour to blue
-    for (auto i=0; i < path.size(); i++){
+    for (auto i=0; i < path.size(); i++) {
         SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
         SDL_RenderDrawPoint(renderer, path[i].first, path[i].second);
     }
 
-    //Update the screen
+    // Update the screen
     SDL_RenderPresent(renderer);
     SDL_Delay(5000);
 

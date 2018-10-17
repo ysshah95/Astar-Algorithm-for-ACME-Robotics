@@ -38,6 +38,7 @@
 #include <cmath>
 #include <queue>
 #include <vector>
+#include <utility>
 
 #include "nodes.hpp"
 #include "map.hpp"
@@ -48,7 +49,7 @@ class astar{
   int y_start_;
   int x_goal_;
   int y_goal_;
-  
+
   /**
    * @brief astar class Constructor
    * @param none
@@ -76,7 +77,8 @@ class astar{
    *
    * @return path with parent directions from start to goal
    */
-  std::vector<std::pair<int, int>> astar_path(std::vector<std::vector<int>> map);
+  std::vector<std::pair<int, int>> astar_path(
+                                  std::vector<std::vector<int>> map);
 
   /**
    *

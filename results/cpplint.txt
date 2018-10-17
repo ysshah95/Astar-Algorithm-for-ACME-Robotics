@@ -1,0 +1,9 @@
+Done processing ./include/map.hpp
+Done processing ./include/astar.hpp
+Done processing ./include/nodes.hpp
+Done processing ./app/map.cpp
+Done processing ./app/astar.cpp
+Done processing ./app/main.cpp
+Done processing ./app/nodes.cpp
+Done processing ./test/main.cpp
+Done processing ./test/test.cpp

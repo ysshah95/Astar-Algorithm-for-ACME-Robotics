@@ -38,6 +38,7 @@
 #include <vector>
 #include <SDL.h>
 #include <iostream>
+#include <utility>
 
 /**
  * 
@@ -60,7 +61,6 @@ class map{
    */
   std::vector<std::vector<int>> create_map();
 
-  
   auto print_path(std::vector<std::vector<int>> map,
                     std::vector<std::pair<int, int>> path) -> bool;
 };

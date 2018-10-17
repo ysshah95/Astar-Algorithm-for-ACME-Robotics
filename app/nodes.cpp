@@ -35,7 +35,7 @@
 // include c+ header file for this class
 #include "nodes.hpp"
 
-nodes::nodes(void) : x_(0), y_(0), g_cost_(0), f_cost_(0){
+nodes::nodes(void) : x_(0), y_(0), g_cost_(0), f_cost_(0) {
     std::cout << "Default Constructor Called" << std::endl;
 }
 
@@ -52,8 +52,8 @@ auto nodes::compute_g(int k) -> double {
 }
 
 auto nodes::compute_f(int x1, int y1) -> double {
-    return f_cost_ = g_cost_ + compute_h(x1, y1); 
+    return f_cost_ = g_cost_ + compute_h(x1, y1);
 }
 
-nodes::~nodes(){
+nodes::~nodes() {
 }

@@ -35,7 +35,7 @@
 // include c+ header file for this class
 #include "astar.hpp"
 
-astar::astar(void) : x_start_(0), y_start_(0), x_goal_(1), y_goal_(1){
+astar::astar(void) : x_start_(0), y_start_(0), x_goal_(1), y_goal_(1) {
     std::cout << "Default Constructor Called" << std::endl;
 }
 
@@ -43,15 +43,18 @@ astar::astar(int xStart, int yStart, int xGoal, int yGoal) :  x_start_(xStart),
                             y_start_(yStart), x_goal_(xGoal), y_goal_(yGoal) {
 }
 
-std::vector<std::pair<int, int>> astar::astar_path(std::vector<std::vector<int>> map){
+std::vector<std::pair<int, int>> astar::astar_path(
+                                std::vector<std::vector<int>> map) {
     int neighbours = 8; /* max no of possible neighbors for any node*/
     /* possible moves in x direction and
     * possible moves in y directions */
     std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
     std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 };
     std::vector<std::pair<int, int>> path;
-    std::priority_queue<nodes,std::vector<nodes>, std::greater<nodes> > open_list;
-    std::priority_queue<nodes,std::vector<nodes>, std::greater<nodes> > temp_list;
+    std::priority_queue<nodes, std::vector<nodes>,
+                        std::greater<nodes>> open_list;
+    std::priority_queue<nodes, std::vector<nodes>,
+                          std::greater<nodes>> temp_list;
     std::vector<std::vector<int> > open(10, std::vector<int>(10, 0));
     std::vector<std::vector<int> > visited(10, std::vector<int>(10, 0));
     std::vector<std::vector<int> > parentDir(10, std::vector<int>(10, 0));
@@ -62,10 +65,6 @@ std::vector<std::pair<int, int>> astar::astar_path(std::vector<std::vector<int>>
     /* while open list is not empty this loop
     * chooses the node with least total cost
     * and expands it*/
-    //std::cout << x_start_ << std::endl;
-    //std::cout << y_start_ << std::endl;
-    //std::cout << x_goal_ << std::endl;
-    //std::cout << y_goal_ << std::endl;
     while (!open_list.empty()) {
       nodes current = open_list.top();
       open_list.pop();
@@ -74,15 +73,12 @@ std::vector<std::pair<int, int>> astar::astar_path(std::vector<std::vector<int>>
       /* If goal is found this loop uses parentDir
       * map to trace the path from start node to
       * end node*/
-      
+
       if (current.x_ == x_goal_ && current.y_ == y_goal_) {
-        //std::cout << "I am Here" << std::endl;
         int p = current.x_, q = current.y_;
         while (!(p == x_start_ && q == y_start_)) {
           int j = parentDir[p][q];
-          path.push_back(std::make_pair(p,q));
-          //std::cout << p << std::endl;
-          //std::cout << q << std::endl;
+          path.push_back(std::make_pair(p, q));
           p += moveX[j];
           q += moveY[j];
         }
@@ -126,12 +122,11 @@ std::vector<std::pair<int, int>> astar::astar_path(std::vector<std::vector<int>>
         }
         ++dir;
       }
-      //std::cout << open_list.size() << std::endl;
     }
     std::cout << "Path not found."
               << std::endl;
     std::cout << "Please run again." << std::endl;
-    path.push_back(std::make_pair(-1,-1));
+    path.push_back(std::make_pair(-1, -1));
     return path;
 }
 

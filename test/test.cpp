@@ -49,32 +49,32 @@ TEST(nodesTest, methodTesting) {
   int i = 0;
   ASSERT_EQ(node2.compute_g(i), 1);
 
-  ASSERT_DOUBLE_EQ(node2.compute_h(1,1),0.0);
+  ASSERT_DOUBLE_EQ(node2.compute_h(1, 1), 0.0);
 
-  ASSERT_DOUBLE_EQ(node2.compute_f(1,1), 1.0);
+  ASSERT_DOUBLE_EQ(node2.compute_f(1, 1), 1.0);
 }
 
-TEST(astarTest, methodTesting){
+TEST(astarTest, methodTesting) {
   astar a;
 
   ASSERT_EQ(a.x_start_, 0);
 
-  astar a1(0,0,5,5);
+  astar a1(0, 0, 5, 5);
   ASSERT_EQ(a1.x_goal_, 5);
 
-  astar astar2(0,0,2,2);
+  astar astar2(0, 0, 2, 2);
   map map2;
   std::vector<std::vector<int>> m1 = map2.create_map();
-  std::vector<std::pair<int,int>> path2;
+  std::vector<std::pair<int, int>> path2;
   path2 = astar2.astar_path(m1);
   bool status1 = map2.print_path(m1, path2);
   ASSERT_EQ(status1, 1);
 
-  astar astar1(0,0,5,5);
+  astar astar1(0, 0, 5, 5);
   map map1;
   std::vector<std::vector<int>> m = map1.create_map();
   m[5][5] = 0;
-  std::vector<std::pair<int,int>> path1;
+  std::vector<std::pair<int, int>> path1;
   path1 = astar1.astar_path(m);
   ASSERT_EQ(path1[0].first, -1);
 
