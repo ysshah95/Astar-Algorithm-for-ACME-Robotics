@@ -49,13 +49,12 @@ std::vector<std::vector<int>> map::create_map() {
         map_vec[i][j] = 0; // updating the matrix elements to 0 if in obstacle.
         }
     }
-    map_vec[2][2] = 0;
     return map_vec;
 }
 
 bool map::print_path(std::vector<std::vector<int>> map, 
                         std::vector<std::pair<int,int>> path) {
-    if (path[1].first == -1){
+    if (path[0].first == -1){
         return 0;
     }
     SDL_Init(SDL_INIT_VIDEO);
@@ -90,15 +89,9 @@ bool map::print_path(std::vector<std::vector<int>> map,
 
     //Update the screen
     SDL_RenderPresent(renderer);
+    SDL_Delay(5000);
 
-    bool isPolling = true;
-    do{
-        SDL_Event event;
-        SDL_PollEvent(&event);
-        if (event.type == SDL_QUIT) {
-            isPolling = false;
-        }
-        SDL_Delay(0);
-    } while (isPolling);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
     return 1;
 }

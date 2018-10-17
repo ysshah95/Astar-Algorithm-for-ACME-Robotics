@@ -81,8 +81,8 @@ std::vector<std::pair<int, int>> astar::astar_path(std::vector<std::vector<int>>
         while (!(p == x_start_ && q == y_start_)) {
           int j = parentDir[p][q];
           path.push_back(std::make_pair(p,q));
-          std::cout << p << std::endl;
-          std::cout << q << std::endl;
+          //std::cout << p << std::endl;
+          //std::cout << q << std::endl;
           p += moveX[j];
           q += moveY[j];
         }
