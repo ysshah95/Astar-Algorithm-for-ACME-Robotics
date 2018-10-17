@@ -27,7 +27,7 @@
  * @version 1.0
  * @brief main cpp file for Project implementation
  * 
- * // TODO
+ * This is the program to implement the A* algorithm. 
  * 
  * @copyright MIT License (c) 2018  
  */
@@ -40,14 +40,15 @@
 
 
 int main() {
+    // Create the map object
     map blank_map;
+    // Store the map with obstacles in a variable.
     std::vector<std::vector<int>> map = blank_map.create_map();
+    // Create the astar object with initialization.
     astar path_finder(0, 0, 5, 5);
+    // Store the path found in a variable
     std::vector<std::pair<int, int>> path = path_finder.astar_path(map);
-    bool status = blank_map.print_path(map, path);
-    if (status) {
-        std::cout << "Path Found" << std::endl;
-    }
-
+    // Show the path on map.
+    blank_map.print_path(map, path);
     return 0;
 }

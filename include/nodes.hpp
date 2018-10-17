@@ -27,7 +27,7 @@
  * @version 1.0
  * @brief Header file for nodes class
  * 
- * // TODO
+ * This class creates the nodes and stores all the costs. 
  * 
  * @copyright MIT License (c) 2018  
  */
@@ -37,12 +37,6 @@
 
 #include <cmath>
 #include <iostream>
-
-/**
- * 
- *   // TODO
- *  
- */
 
 class nodes{
  public:

@@ -27,7 +27,8 @@
  * @version 1.0
  * @brief test file for gtest
  * 
- * // TODO
+ * This file tests all the methods written in classes.
+ * This testing follows Google Testing Style.
  * 
  * @copyright MIT License (c) 2018  
  */
@@ -38,6 +39,12 @@
 #include "map.hpp"
 #include "astar.hpp"
 
+/**
+ * @brief Test for checking nodes class implementation
+ * @section DESCRIPTION Used ASSERT macro instead of EXPECT because 
+ *          if there is a failure in initialization tests the test
+ *          execution should abort
+ */
 TEST(nodesTest, methodTesting) {
   nodes node1;
 
@@ -54,6 +61,12 @@ TEST(nodesTest, methodTesting) {
   ASSERT_DOUBLE_EQ(node2.compute_f(1, 1), 1.0);
 }
 
+/**
+ * @brief Test for checking astar and map class methods
+ * @section DESCRIPTION Used ASSERT macro instead of EXPECT because 
+ *          if there is a failure in initialization tests the test
+ *          execution should abort
+ */
 TEST(astarTest, methodTesting) {
   astar a;
 

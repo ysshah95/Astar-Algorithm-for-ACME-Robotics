@@ -27,7 +27,8 @@
  * @version 1.0
  * @brief Definition of map class methods
  * 
- * // TODO
+ * This class implements the mapping of the algorithm. One method creates 
+ * the map and other draws the path on the map. 
  * 
  * @copyright MIT License (c) 2018  
  */
@@ -57,6 +58,8 @@ bool map::print_path(std::vector<std::vector<int>> map,
     if (path[0].first == -1) {
         return 0;
     }
+
+    // Initialize the SDL library to create a window.
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow(
         "Testing od SDL",

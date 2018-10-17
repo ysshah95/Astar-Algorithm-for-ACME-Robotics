@@ -27,7 +27,9 @@
  * @version 1.0
  * @brief Header file for astar class
  * 
- * // TODO
+ * This class defines the methods that finds optimum path given the 
+ * map with obstacles. It also has a method that sorts the priority queue 
+ * of nodes with ascending order of the cost function. 
  * 
  * @copyright MIT License (c) 2018  
  */

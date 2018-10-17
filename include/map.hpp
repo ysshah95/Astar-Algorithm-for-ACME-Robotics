@@ -27,7 +27,8 @@
  * @version 1.0
  * @brief Header file for map class
  * 
- * // TODO
+ * This class implements the mapping of the algorithm. One method creates 
+ * the map and other draws the path on the map. 
  * 
  * @copyright MIT License (c) 2018  
  */
@@ -39,12 +40,6 @@
 #include <SDL.h>
 #include <iostream>
 #include <utility>
-
-/**
- * 
- *   //TODO
- * 
- */
 
 class map{
  public:

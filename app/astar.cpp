@@ -27,7 +27,9 @@
  * @version 1.0
  * @brief Definition of astar class methods
  * 
- * // TODO
+ * This class defines the methods that finds optimum path given the 
+ * map with obstacles. It also has a method that sorts the priority queue 
+ * of nodes with ascending order of the cost function. 
  * 
  * @copyright MIT License (c) 2018  
  */
@@ -35,44 +37,52 @@
 // include c+ header file for this class
 #include "astar.hpp"
 
+// Default constructor
 astar::astar(void) : x_start_(0), y_start_(0), x_goal_(1), y_goal_(1) {
     std::cout << "Default Constructor Called" << std::endl;
 }
 
+// Parameterized constructor
 astar::astar(int xStart, int yStart, int xGoal, int yGoal) :  x_start_(xStart),
                             y_start_(yStart), x_goal_(xGoal), y_goal_(yGoal) {
 }
 
+// Gives vector of x and y coordinates of optimal path given the full map.
 std::vector<std::pair<int, int>> astar::astar_path(
                                 std::vector<std::vector<int>> map) {
-    int neighbours = 8; /* max no of possible neighbors for any node*/
-    /* possible moves in x direction and
-    * possible moves in y directions */
-    std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
-    std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 };
+    int neighbours = 8;  // max no of possible neighbors for any node
+
     std::vector<std::pair<int, int>> path;
+    // Create a priority list of open nodes
     std::priority_queue<nodes, std::vector<nodes>,
                         std::greater<nodes>> open_list;
+    // Create a priority list to store temporary nodes
     std::priority_queue<nodes, std::vector<nodes>,
                           std::greater<nodes>> temp_list;
+    // Create 2D vectors to store open and visited nodes.
     std::vector<std::vector<int> > open(10, std::vector<int>(10, 0));
     std::vector<std::vector<int> > visited(10, std::vector<int>(10, 0));
     std::vector<std::vector<int> > parentDir(10, std::vector<int>(10, 0));
+
+    // 8 possible moves in x and y direction
+    std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
+    std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 };
+
     nodes start(x_start_, y_start_, 0, 0);
     start.f_cost_ = start.compute_f(x_goal_, y_goal_);
     open_list.push(start);
     open[start.x_][start.y_] = start.f_cost_;
-    /* while open list is not empty this loop
-    * chooses the node with least total cost
-    * and expands it*/
+
+    /**This loop takes the first entry of the open list as the current node
+     * since it has the lowest total cost function.*/
+
     while (!open_list.empty()) {
       nodes current = open_list.top();
       open_list.pop();
       open[current.x_][current.y_] = 0;
       visited[current.x_][current.y_] = 1;
-      /* If goal is found this loop uses parentDir
-      * map to trace the path from start node to
-      * end node*/
+
+      /** Trace the path and store it of the goal is found.*/
 
       if (current.x_ == x_goal_ && current.y_ == y_goal_) {
         int p = current.x_, q = current.y_;
@@ -84,20 +94,20 @@ std::vector<std::pair<int, int>> astar::astar_path(
         }
         return path;
       }
-      /* This loop expands the current node and
-      * calculates the costs for all the neighbours. */
+
+      /** Expand all the nodes for current node, calculate their 
+       * costs and store them in their variables.*/
       int dir = 0;
       while (dir < 8) {
           int dx = current.x_ + moveX[dir], dy = current.y_ + moveY[dir];
-          /* If the node lies outside the map, is blocked
-          * or is in the visisted list then it is ignored.*/
-        if (!(dx < 0 || dx > 9 || dy < 0 || dy > 9 || map[dx][dy] == 0
-                || visited[dx][dy] == 1)) {
+          /** For all the nodes lying outside the map, blocked
+           * or is in the visisted list then simply ignor them.*/
+        if (!(dx < 0 || dx > 9 || dy < 0 || dy > 9 ||
+              map[dx][dy] == 0 || visited[dx][dy] == 1)) {
             nodes child(dx, dy, current.g_cost_, current.f_cost_);
             child.g_cost_ = child.compute_g(dir);
             child.f_cost_ = child.compute_f(x_goal_, y_goal_);
-            /* If the node is not in the open list
-            * it's total cost and parent node are updated.*/
+            /* For new nodes, calculate their costs and store them.*/
           if (open[dx][dy] == 0) {
               open[dx][dy] = child.f_cost_;
               open_list.push(child);
@@ -125,7 +135,6 @@ std::vector<std::pair<int, int>> astar::astar_path(
     }
     std::cout << "Path not found."
               << std::endl;
-    std::cout << "Please run again." << std::endl;
     path.push_back(std::make_pair(-1, -1));
     return path;
 }

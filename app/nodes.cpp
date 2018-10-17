@@ -27,7 +27,7 @@
  * @version 1.0
  * @brief Definition of nodes class methods
  * 
- * // TODO
+ * This class creates the nodes and stores all the costs. 
  * 
  * @copyright MIT License (c) 2018  
  */
